@@ -1,0 +1,9 @@
+with open(os.path.join(PATH_TO_DATA, 'site_dic.pkl'), 'rb') as site_dic_pkl:
+    site_dic = pickle.load(site_dic_pkl)
+
+with open(os.path.join(PATH_TO_DATA, 'train_test_df.pkl'),'rb') as file:
+    train_test_df = pickle.load(file)
+---
+
+with open(os.path.join(PATH_TO_DATA, 'X_train_test_sparse_sites_precision.pkl'), 'wb') as X_train_sparse_pkl:
+    pickle.dump(X_train_test_sparse_sites, X_train_sparse_pkl, protocol=2)
